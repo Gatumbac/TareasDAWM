@@ -1,0 +1,5 @@
+{
+  "titulo": "Lista de Tecnologias",
+  "descripcion": "Estos datos provienen de un archivo JSON",
+  "items": ["HTML", "CSS", "React", "Node.js", "PostgreSQL", "SASS", "PHP", "MongoDB", "Laravel"]
+}

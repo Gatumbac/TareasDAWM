@@ -1,0 +1,221 @@
+/*TAREA 4*/
+/*ESTILOS BASE*/
+* {
+    box-sizing: border-box;
+}
+/*USO DE UNIDADES DE MEDIDA VW Y REM*/
+/*VW SE REFIERE AL ANCHO DEL VIEWPORT Y SE MIDE EN PORCENTAJES*/
+/*1VW = 1% DEL ANCHO DEL VIEWPORT*/
+/*REM ES RELATIVO A LA FUENTE DE LA RAIZ*/
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    padding: 2vw;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    max-width: 200px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #06137b;
+}
+
+section {
+    border-top: 3px solid #001475;
+    margin: 3rem 0;
+    padding-top: 2rem;
+}
+
+section article h3 {
+    color: #2b4eff;
+}
+
+footer .copyright {
+    font-weight: bold;
+}
+
+#contacto .developer {
+    font-weight: bold;
+}
+
+.titleContainer, .nav {
+    text-align: center;
+}
+
+.logo, .titleContainer, .nav {
+    margin-right: 3vw;
+}
+
+.sectionTitle {
+    color: #001eb3;
+}
+
+#headerTitle {
+    font-size: 3rem;
+    color: #001475;
+}
+
+#contacto {
+    border-top: 3px solid #001475;
+    text-align: center;
+    padding: 1rem;
+}
+
+/*HEADER Y NAVEGACION*/
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #B8DFFF;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+/*CONTENIDO PRINCIPAL*/
+main {
+    margin-top: 225px;
+}
+
+/*TARJETAS*/
+.tarjeta {
+    display: inline-block;
+    width: 25%;
+    margin: 1rem;
+    background-color: #E6EAFF;
+    padding: 2rem;
+    border: 1px solid #001475;
+    text-align: center;
+    padding-bottom: 60px;
+    box-shadow: 5px 10px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    transition: all 0.3s ease-in;
+}
+
+.tarjeta:hover {
+    transform: scale(1.03);
+    background-color: #eef3ff;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+}
+
+.tarjeta-tip {
+    background-color: #8AFFE4;
+    padding-bottom: 0;
+}
+
+.tarjeta-tip:hover {
+    background-color: #9fffe9;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    background-color: #8AFFE4;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #6fffd1;
+}
+
+.tarjetaRelative {
+    position: relative;
+}
+
+.tarjetaBoton {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.sectionTitleSticky {
+    position: sticky;
+    top: 230px;
+    background: #ffffff;
+    z-index: 500;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 10px;
+}
+
+/*RESPONSIVE DESIGN*/
+
+/*1200px*/
+@media (max-width: 1200px) {
+    .tarjeta {
+        width: 30%;
+    }
+}
+
+/*992px*/
+@media (max-width: 992px) {
+    .sectionTitleSticky {
+        position: static;
+    }
+    main {
+        margin-top: 0;
+    }
+    header {
+        flex-direction: column;
+        position: static;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .tarjeta {
+        width: 40%;
+    }
+}
+
+/*768px*/
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tarjeta {
+        width: 80%;
+        display: block;
+        margin: 1rem auto;
+    }
+}
+
+/*480px*/
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .tarjeta {
+        width: 90%;
+    }
+}

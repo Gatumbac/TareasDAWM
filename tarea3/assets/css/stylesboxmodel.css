@@ -1,0 +1,88 @@
+/*TAREA 3*/
+
+/*BLOQUE 1*/
+
+/*BOX MODEL*/
+
+.tarjeta {
+    display: inline-block;
+    width: 25%;
+    margin: 0 20px 0 20px;
+    background-color: #E6EAFF;
+    padding: 20px;
+    border: 1px solid #001475;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.tarjeta-tip {
+    background-color: #8AFFE4;
+    padding-bottom: 0;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #8AFFE4;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/*BLOQUE 2*/
+/*POSICIONAMIENTO*/
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #B8DFFF;
+    z-index: 1000;
+}
+
+/*se deja el margin del header para evitar que se oculte el contenido*/
+main {
+    margin-top: 225px;
+}
+
+.sectionTitleSticky { 
+    position: sticky; 
+    top: 230px; 
+    background: #ffffff;
+    z-index: 500;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    padding: 10px;
+}
+
+.tarjetaRelative {
+    position: relative;
+}
+
+.tarjetaBoton {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/*BLOQUE 3*/
+/*EFECTOS VISUALES*/
+
+.tarjeta {
+    box-shadow: 5px 10px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    transition: all 0.3s ease-in;
+}
+
+.tarjeta:hover{
+    transform: scale(1.03);
+    background-color: #eef3ff;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+}
+
+.tarjeta-tip:hover {
+    background-color: #9fffe9;
+}
+
+nav a:hover{
+    font-weight: bold;
+}

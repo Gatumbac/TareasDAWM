@@ -1,0 +1,65 @@
+/*TAREA 2*/
+/*SELECTORES DE ETIQUETA*/
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    padding: 20px;
+}
+
+img {
+    width: 100%;
+    max-width: 200px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #06137b;
+}
+
+section {
+    border-top: 3px solid #001475;
+    margin: 35px 0 35px 0;
+}
+
+/*SELECTOR COMBINADO*/
+section article h3 {
+  color: #2b4eff;
+}
+
+footer .copyright {
+    font-weight: bold;
+}
+
+#contacto .developer {
+    font-weight: bold;
+}
+
+/*SELECTORES DE CLASE */
+.titleContainer, .nav{
+    text-align: center;
+    display: inline-block;
+}
+
+.logo, .titleContainer, .nav {
+    margin-right: 50px;
+}
+
+.sectionTitle {
+    color: #001eb3;
+}
+
+/*SELECTORES DE ID*/
+#headerTitle {
+    font-size: 50px;
+    color: #001475;
+}
+
+#contacto {
+    border-top: 3px solid #001475;
+    text-align: center;
+}
