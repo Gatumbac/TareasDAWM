@@ -1,0 +1,270 @@
+:root {
+    --bgColor: #222831;
+    --bgSecondary: #393E46;
+    --titleColor: #DFD0B8;
+    --textColor: #DFD0B8;
+    --textLight: #948979;
+    --buttonColor: #098BC8;
+    --buttonHover: #0BAAF4;
+    --buttonText: #ffffff;
+    --accentColor: #4FC3F7;
+    --linkColor: #0BAAF4;
+    --linkHover: #4FC3F7;
+    --borderColor: #948979;
+    --font: "Open Sans", sans-serif;
+}
+
+
+html{
+	box-sizing: border-box; /*Box Model - Facilita modelo de caja y dimensiones*/
+	font-size: 62.5%; /*Cambio unidad de dimension: 1rem = 10px*/
+	
+	font-family: var(--font);
+	font-style: normal;
+	font-weight: normal;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit; /*Todos los elementos heredan el border-box*/
+}
+
+body {
+	background-color: var(--bgColor);
+	color: var(--textColor);
+	font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    color: var(--titleColor);
+	line-height: 1.2;
+	margin: 1rem 0;
+}
+
+h1 {
+	font-size: 4.8rem;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 4rem;
+	font-weight: 600;
+}
+
+h3 {
+	font-size: 3.2rem;
+	font-weight: 500;
+}
+
+h4 {
+	font-size: 2.8rem;
+	font-weight: 500;
+}
+
+a {
+	text-decoration: none;
+	color: var(--linkColor);
+}
+
+p {
+	line-height: 1.6;
+}
+
+img {
+	width: 100%;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/*Clase para centrar el contenido*/
+.container {
+	margin: 0 auto;
+	max-width: 100rem;
+}
+
+/*PAGINA WEB*/
+.header, .footer {
+    background-color: var(--bgSecondary);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 3rem;
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav__link:hover {
+    color: var(--linkHover);
+    font-weight: bold;
+}
+
+
+
+@media(min-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-around;
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    
+    .nav__list {
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+
+.footer {
+	padding: 2rem;
+}
+
+.footer__div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	
+}
+
+.footer__div p {
+	text-align: center;
+	margin: 0;
+	
+}
+
+.footer__contact {
+	text-align: center;
+}
+
+.footer__contact h4 {
+	margin: 1.2rem;
+}
+
+/*CONTENIDO PRINCIPAL*/
+
+main {
+    padding: 1rem 1rem;
+}
+
+section {
+    margin: 3rem 0;
+}
+
+.inicio {
+    margin-top: auto;
+}
+
+.inicio__img img {
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in;
+}
+
+.inicio__img img:hover {
+    transform: scale(1.05);
+}
+
+@media(min-width: 768px) {
+    .inicio {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 3rem;
+    }
+    
+    .inicio {
+        margin-top: 15rem;
+    }
+    
+    .content__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3rem;
+    }
+}
+
+.tarjeta {
+    padding: 2rem 2rem 5rem 2rem;
+    background-color: var(--bgSecondary);
+    border-radius: 1rem;
+    
+    
+    /*POSICION ABSOLUTA Y RELATIVA*/
+    /*TARJETA Y BOTON*/
+    position: relative;
+}
+
+.tarjeta h2 {
+    text-align: center;
+    border-bottom: 1px solid #fff;
+}
+
+.btn {
+    background-color: var(--buttonColor);
+    color: var(--buttonText);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.btn:hover {
+    background-color: var(--buttonHover);
+}
+
+.tarjeta__content ul {
+    margin: 2.5rem 0;
+}
+
+.tarjeta {
+    transition: all 0.3s ease-in;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+/*SELECTOR DE ID*/
+#tituloSeccionPrincipal {
+    font-size: 5rem;
+    text-align: center;
+}
+
+@media(min-width: 768px) {
+    #tituloSeccionPrincipal {
+        text-align: left;
+    }
+}
+
+/*ICONO FLOTANTE*/
+
+.icono-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--buttonColor);
+  color: var(--buttonText);
+  padding: 1rem;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.icono-flotante:hover {
+  background-color: var(--buttonHover);
+}
